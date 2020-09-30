@@ -67,3 +67,9 @@
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = git@github.com:tpope/vim-commentary.git
+[submodule "bundle/nix"]
+	path = bundle/nix
+	url = git@github.com:LnL7/vim-nix.git
+[submodule "bundle/bettergrep"]
+	path = bundle/bettergrep
+	url = git@github.com:qalshidi/vim-bettergrep.git
