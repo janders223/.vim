@@ -61,9 +61,6 @@
 [submodule "bundle/asyncomplete-lsp"]
 	path = bundle/asyncomplete-lsp
 	url = git@github.com:prabirshrestha/asyncomplete-lsp.vim.git
-[submodule "bundle/ale"]
-	path = bundle/ale
-	url = git@github.com:dense-analysis/ale.git
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = git@github.com:tpope/vim-commentary.git
