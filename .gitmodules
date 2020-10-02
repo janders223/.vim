@@ -70,3 +70,15 @@
 [submodule "bundle/bettergrep"]
 	path = bundle/bettergrep
 	url = git@github.com:qalshidi/vim-bettergrep.git
+[submodule "bundle/qf"]
+	path = bundle/qf
+	url = git@github.com:romainl/vim-qf.git
+[submodule "bundle/julia"]
+	path = bundle/julia
+	url = git://github.com/JuliaEditorSupport/julia-vim.git
+[submodule "bundle/repeat"]
+	path = bundle/repeat
+	url = git@github.com:tpope/vim-repeat.git
+[submodule "bundle/tmux-navigator"]
+	path = bundle/tmux-navigator
+	url = git@github.com:christoomey/vim-tmux-navigator.git
