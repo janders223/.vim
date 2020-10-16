@@ -85,3 +85,9 @@
 [submodule "bundle/jsonnet"]
 	path = bundle/jsonnet
 	url = git@github.com:google/vim-jsonnet.git
+[submodule "bundle/hcl"]
+	path = bundle/hcl
+	url = git@github.com:b4b4r07/vim-hcl.git
+[submodule "bundle/toml"]
+	path = bundle/toml
+	url = git@github.com:cespare/vim-toml.git
