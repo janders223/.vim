@@ -91,3 +91,12 @@
 [submodule "bundle/toml"]
 	path = bundle/toml
 	url = git@github.com:cespare/vim-toml.git
+[submodule "bundle/lua"]
+	path = bundle/lua
+	url = git@github.com:xolox/vim-lua-ftplugin.git
+[submodule "bundle/misc"]
+	path = bundle/misc
+	url = git@github.com:xolox/vim-misc.git
+[submodule "bundle/dhall"]
+	path = bundle/dhall
+	url = git@github.com:vmchale/dhall-vim.git
