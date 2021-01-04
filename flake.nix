@@ -45,8 +45,9 @@
     };
 
   in rec {
-    defaultPackage = pkgs.vim_configurable.customize {
-      name = "janders223_vim";
+    defaultPackage = self.packages."${system}".vim;
+    packages.vim = pkgs.vim_configurable.customize {
+      name = "vim";
 
       vimrcConfig.customRC = vimrc;
 
@@ -85,11 +86,17 @@
       };
     };
 
+    defaultApp = self.apps."${system}".vim;
+    apps.vim = {
+      type = "app";
+      program = "${self.defaultPackage."${system}"}/bin/vim";
+    };
+
     devShell = pkgs.mkShell {
       buildInputs = with pkgs; [
         defaultPackage
         dhall
-        dhall-json
+        # dhall-json
         # dhall-lsp-server
         gitAndTools.gitFull
         jq
