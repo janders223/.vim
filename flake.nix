@@ -44,9 +44,12 @@
       };
     };
 
-  in rec {
-    defaultPackage = self.packages."${system}".vim;
-    packages.vim = pkgs.vim_configurable.customize {
+    vimApp = utils.lib.mkApp {
+      drv = defaultPackage;
+      exePath = "/bin/vim";
+    };
+
+    defaultPackage  = pkgs.vim_configurable.customize {
       name = "vim";
 
       vimrcConfig.customRC = vimrc;
@@ -86,11 +89,14 @@
       };
     };
 
-    defaultApp = self.apps."${system}".vim;
-    apps.vim = {
-      type = "app";
-      program = "${self.defaultPackage."${system}"}/bin/vim";
+  in {
+    inherit defaultPackage;
+    packages = utils.lib.flattenTree {
+      vimApp = defaultPackage;
     };
+
+    app.vimApp = vimApp;
+    defaultApp = vimApp;
 
     devShell = pkgs.mkShell {
       buildInputs = with pkgs; [
